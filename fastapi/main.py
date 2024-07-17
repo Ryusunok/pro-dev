@@ -27,7 +27,7 @@ def get_db():
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World", "user": "person"}
+    return {"Hello": "World", "user": "person", "date": "2024.07.17.08:05"}
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, db: Session = Depends(get_db)):
